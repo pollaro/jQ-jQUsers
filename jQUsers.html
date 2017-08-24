@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Users! They ruin everything!</title>
+        <link rel="stylesheet" href="jQUsers.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <table id="tab">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>Contact #</th>
+            </tr>
+        </table>
+
+
+        <h2>Add User</h2>
+        <div class="formBox">
+            <form id="inputForm" action="" method="post">
+                First Name: <input type="text" name="firstName">
+                <br>
+                Last Name: <input type="text" name="lastName">
+                <br>
+                Email Address: <input type="text" name="emailAdd">
+                <br>
+                Contact #: <input type="text" name="contactNum">
+                <br>
+                <input id="submitBut" type="submit" value="Add User">
+            </form>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#inputForm').submit(function(){
+                    var first = $('input[name=firstName]').val();
+                    var last = $('input[name=lastName]').val();
+                    var email = $('input[name=emailAdd]').val();
+                    var num = $('input[name=contactNum]').val();
+                    console.log(first,last,email,num);
+                $('#tab').append('<tr><td>'+first+'</td><td>'+last+'</td><td>'+email+'</td><td>'+num+'</td></tr>');
+                return false;
+                });
+
+            });
+        </script>
+    </body>
+</html>

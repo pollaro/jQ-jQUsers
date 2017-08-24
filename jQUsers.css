@@ -1,0 +1,23 @@
+*{
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+table{
+    border: solid black thin;
+}
+
+th,td{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h2{
+    border-bottom: solid gray;
+}
+
+.formBox{
+    display: inline-block;
+    width:380px;
+    text-align: right;
+}
